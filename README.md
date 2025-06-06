@@ -42,30 +42,34 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 - PostgreSQL 13+
 - pip 20+
 
-### Setup
-- 1. Clone the repository:
+## Setup
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/multi-armed-bandit-api.git
 cd multi-armed-bandit-api
 
-- 2. Create and activate virtual environment:
+2. Create and activate virtual environment:
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # or venv\Scripts\activate (Windows)
 
-- 3. Set up environment variables:
+3. Set up environment variables:
 cp .env.bandit .env
 # Edit .env with your PostgreSQL credentials
 
-4. Initialize database:
+## 4. Initialize database:
+
 python init_db.py
 
 ##🏃 Running the API
+
 5. Start the development server:
 uvicorn main:app --reload
 The API will be available at http://localhost:8000 with interactive docs at http://localhost:8000/docs
 
 ## 🧪 For Example:
+
 Adding Metrics:
 curl -X POST "http://localhost:8000/metrics/" \
   -H "Content-Type: application/json" \
@@ -77,7 +81,7 @@ curl -X POST "http://localhost:8000/metrics/" \
     "successes": 120
   }'
 
-6. Getting Allocations:
+## 6. Getting Allocations:
 curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
 
 7. Typical output:
