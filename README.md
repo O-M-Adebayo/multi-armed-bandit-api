@@ -1,4 +1,5 @@
 # Multi-Armed Bandit Optimization API
+
 Multi-Armed Bandit API for real-time A/B test optimization. Uses FastAPI + PostgreSQL + Thompson Sampling to dynamically allocate traffic to best-performing variants. Achieves 20-30% higher conversions vs traditional testing. Production-ready with Docker support. #DataScience #MachineLearning"
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
@@ -42,17 +43,17 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 - pip 20+
 
 ### Setup
-1. Clone the repository:
+- 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/multi-armed-bandit-api.git
 cd multi-armed-bandit-api
 
-2. Create and activate virtual environment:
+- 2. Create and activate virtual environment:
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # or venv\Scripts\activate (Windows)
 
-3. Set up environment variables:
+- 3. Set up environment variables:
 cp .env.bandit .env
 # Edit .env with your PostgreSQL credentials
 
