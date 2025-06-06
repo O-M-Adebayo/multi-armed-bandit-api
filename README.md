@@ -92,7 +92,6 @@ curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
 ```
 
 7. Typical output:
-```markdown
 ```json
 {
   "experiment_id": "homepage_test",
@@ -102,7 +101,6 @@ curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
     "variant1": 61.8
   }
 }
-```
 ```
 
 
@@ -119,6 +117,7 @@ experiment_metrics: Daily performance metrics
 ![image](https://github.com/user-attachments/assets/0f4d1159-5c73-4936-82e9-33e67514b51f)
 
 ## 📚 Documentation
+
 Full API documentation available at:
 
 Interactive Swagger UI: http://localhost:8000/docs
@@ -126,6 +125,7 @@ Interactive Swagger UI: http://localhost:8000/docs
 Redoc: http://localhost:8000/redoc
 
 ## 🙋 FAQ
+
 Q: How does this compare to traditional A/B testing?
 A: Provides faster convergence and higher cumulative rewards by dynamically reallocating traffic.
 
