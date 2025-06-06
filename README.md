@@ -2,6 +2,13 @@
 
 Multi-Armed Bandit API for real-time A/B test optimization. Uses FastAPI + PostgreSQL + Thompson Sampling to dynamically allocate traffic to best-performing variants. Achieves 20-30% higher conversions vs traditional testing. Production-ready with Docker support. #DataScience #MachineLearning"
 
+My development process followed CRISP-DM (CRoss-Industry Standard Process for Data Mining) methodology:
+
+- **Data Understanding**: Analyzed historical A/B test patterns
+
+- **Modeling**: Selected Thompson Sampling for its optimal explore/exploit balance
+
+
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.68.0-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13%2B-blueviolet)
