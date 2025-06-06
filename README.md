@@ -25,7 +25,7 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 - **Scalable Architecture**: Handles high-volume traffic with PostgreSQL backend
 - **Session Consistency**: Maintains user experience across visits
 
-## 📊 Performance Benefits
+## 📊 Predicted Performance Benefits
 
 | Metric            | Improvement |
 |-------------------|------------|
