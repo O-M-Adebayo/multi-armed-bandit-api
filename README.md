@@ -69,12 +69,16 @@ python init_db.py
 ##🏃 Running the API
 
 5. Start the development server:
+```bash
 uvicorn main:app --reload
+
 The API will be available at http://localhost:8000 with interactive docs at http://localhost:8000/docs
+```
 
 ## 🧪 For Example:
+
+### Adding Metrics:
 ```bash
-Adding Metrics:
 curl -X POST "http://localhost:8000/metrics/" \
   -H "Content-Type: application/json" \
   -d '{
@@ -86,12 +90,12 @@ curl -X POST "http://localhost:8000/metrics/" \
   }'
 ```
 
-## 6. Getting Allocations:
+### Getting Allocations:
 ```bash
 curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
 ```
 
-7. Typical output:
+### Typical output:
 ```json
 {
   "experiment_id": "homepage_test",
@@ -103,16 +107,15 @@ curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
 }
 ```
 
-
 ## 🗄️ Database Schema
 
-Key Tables:
+### Key Tables:
 
-experiments: Master experiment definitions
+- **experiments**: Master experiment definitions
 
-variants: Test variations (control/variants)
+- **variants**: Test variations (control/variants)
 
-experiment_metrics: Daily performance metrics
+- **experiment_metrics**: Daily performance metrics
 
 ![image](https://github.com/user-attachments/assets/0f4d1159-5c73-4936-82e9-33e67514b51f)
 
