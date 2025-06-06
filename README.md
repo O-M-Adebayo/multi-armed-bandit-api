@@ -48,6 +48,7 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
 1. Clone the repository:
 
