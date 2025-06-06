@@ -45,12 +45,12 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 ## Setup
 
 1. Clone the repository:
-```bash
+
 git clone https://github.com/yourusername/multi-armed-bandit-api.git
 cd multi-armed-bandit-api
 
 2. Create and activate virtual environment:
-```bash
+
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # or venv\Scripts\activate (Windows)
