@@ -44,6 +44,11 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 
 ## Setup
 
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
 1. Clone the repository:
 
 git clone https://github.com/yourusername/multi-armed-bandit-api.git
@@ -86,6 +91,20 @@ curl -X POST "http://localhost:8000/metrics/" \
 curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
 
 7. Typical output:
+
+### 3. **JSON Data**
+```markdown
+```json
+{
+  "experiment_id": "homepage_test",
+  "date": "2023-07-16",
+  "allocations": {
+    "control": 38.2,
+    "variant1": 61.8
+  }
+}
+
+
 {
   "experiment_id": "homepage_test",
   "date": "2023-07-16",
