@@ -13,7 +13,7 @@ def get_db_connection():
     return psycopg2.connect(
         dbname="bandit_db",
         user="bandit_user",
-        password="Mike@PostgreSQL22",
+        password="kkkkkkk",
         host="localhost",
         cursor_factory=RealDictCursor
     )
