@@ -33,7 +33,6 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 - **Database**: PostgreSQL 13+
 - **Algorithm**: Thompson Sampling (Bayesian Bandit)
 - **Infrastructure**: Docker, Uvicorn
-- **Monitoring**: Prometheus, Grafana (optional)
 
 ## 📦 Installation
 
