@@ -42,8 +42,78 @@ A production-ready API for dynamic traffic allocation using Thompson Sampling, d
 - pip 20+
 
 ### Setup
-
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/multi-armed-bandit-api.git
 cd multi-armed-bandit-api
+
+2. Create and activate virtual environment:
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or venv\Scripts\activate (Windows)
+
+3. Set up environment variables:
+cp .env.bandit .env
+# Edit .env with your PostgreSQL credentials
+
+4. Initialize database:
+python init_db.py
+
+##🏃 Running the API
+5. Start the development server:
+uvicorn main:app --reload
+The API will be available at http://localhost:8000 with interactive docs at http://localhost:8000/docs
+
+## 🧪 For Example:
+Adding Metrics:
+curl -X POST "http://localhost:8000/metrics/" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "experiment_id": "homepage_test",
+    "variant_id": "control",
+    "date": "2023-07-15",
+    "impressions": 1000,
+    "successes": 120
+  }'
+
+6. Getting Allocations:
+curl "http://localhost:8000/allocations/homepage_test?for_date=2023-07-16"
+
+7. Typical output:
+{
+  "experiment_id": "homepage_test",
+  "date": "2023-07-16",
+  "allocations": {
+    "control": 38.2,
+    "variant1": 61.8
+  }
+}
+
+## 🗄️ Database Schema
+
+Key Tables:
+
+experiments: Master experiment definitions
+
+variants: Test variations (control/variants)
+
+experiment_metrics: Daily performance metrics
+
+![image](https://github.com/user-attachments/assets/0f4d1159-5c73-4936-82e9-33e67514b51f)
+
+## 📚 Documentation
+Full API documentation available at:
+
+Interactive Swagger UI: http://localhost:8000/docs
+
+Redoc: http://localhost:8000/redoc
+
+## 🙋 FAQ
+Q: How does this compare to traditional A/B testing?
+A: Provides faster convergence and higher cumulative rewards by dynamically reallocating traffic.
+
+Q: Can I add more than 2 variants?
+A: Yes! The system supports N variants out of the box.
+
+Q: How frequently should I call the allocations endpoint?
+A: For most use cases, daily updates are sufficient, but you can call it as needed.
